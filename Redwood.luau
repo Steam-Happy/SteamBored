@@ -1,4 +1,4 @@
--- ok leaking cause some sped kids figured out how to mod guns after months
+-- ok leaking cus redwoodian kids figured out how to mod guns after months
 -- This code is horrendous and I hope it fucking explodes
 
 if game.PlaceId ~= 10456235914 then print("Wrong game"); return end
@@ -89,7 +89,7 @@ end)
 local function teleport(destination)
 	tung()
 	local _, _, root = getParts()
-	root.CFrame = destinationf
+	root.CFrame = destination
 end
 
 local app = cascade.New({
@@ -100,7 +100,7 @@ local app = cascade.New({
 
 local window = app:Window({
     Title = "tungware.cc",
-    Subtitle = Services.HttpService:GenerateGUID(false),
+    Subtitle = Services.HttpService:GenerateGUID(false), -- literally serves no purpose
 })
 
 local section = window:Section({ Title = "TUNG" })
@@ -351,7 +351,7 @@ local noclipthing = maine:Form():Row()
 
 noclipthing:Left():TitleStack({
     Title = "Noclip",
-    Subtitle = "aura detected",
+    Subtitle = "Skill detected",
 })
 
 local toggle = noclipthing:Right():Toggle({
@@ -386,6 +386,7 @@ local keybind = noclipKeybindRow:Right():KeybindField({
 
 -- noclip end
 --modgun
+-- worst method to mod it i'm pretty sure but yeah 
 local IDF = gunmod:Form():Row()
 
 IDF:Left():TitleStack({
@@ -400,7 +401,6 @@ IDF:Right():Button({
         -- liveleak code below
         task.spawn(function()
 local tuffmangolarp = nil
-local HttpService = game:GetService("HttpService")
 local plrs = game:GetService("Players")
 local lp = plrs.LocalPlayer
 local char = lp.Character or lp.CharacterAdded:Wait()
