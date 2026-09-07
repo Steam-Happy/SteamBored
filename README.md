@@ -6,4 +6,4 @@ Scripts:
    - Teleports
 
 - Cart ride around a 75kw diesel generator
-  -Anticheat Disabler
+  - Anticheat Disabler
