@@ -1,5 +1,6 @@
 -- ok leaking cus redwoodian kids figured out how to mod guns after months
 -- This code is horrendous and I hope it fucking explodes
+-- I also wanna thank @Frosno2499 and @redblock_15 for helping testing this script
 
 if game.PlaceId ~= 10456235914 then print("Wrong game"); return end
 if not tungloaded then
@@ -157,17 +158,17 @@ falldamage:Right():Button({
     State = "Primary",
     Pushed = function(self)
         local a=game:GetService("ReplicatedStorage").Storage.Events.FLL_DMG;local b;b=hookmetamethod(game,"__namecall",function(...)local self=...if rawequal(self,a)and getnamecallmethod()=="FireServer"then local c=table.pack(...)local d=table.pack(b(self,table.unpack(c,1,c.n)))return table.unpack(d,1,d.n)end;return b(...)end)local e;e=hookfunction(a.FireServer,function(...)local self=...if rawequal(self,a)then local c=table.pack(...)local d=table.pack(e(table.unpack(c,1,c.n)))return table.unpack(d,1,d.n)end;return e(self,...)end)
-        -- Prevent fall damage events from affecting the local player.
+        -- аааааааааааааааааааааааа
     end,
 })
 
-local larpgod67 = misc:Form():Row()
+local becomfugitive = misc:Form():Row()
 
-larpgod67:Left():TitleStack({
+becomfugitive:Left():TitleStack({
     Title = "Become fugitive",
 })
 
-larpgod67:Right():Button({
+becomfugitive:Right():Button({
     Label = "Press",
     State = "Primary",
     Pushed = function(self)
@@ -286,8 +287,7 @@ local function nclip()
     Clip = false
     task.wait(0.1)
 
-    -- Keep the anti-cheat marker consistent after respawn.
-        lp.CharacterAdded:Connect(function(newCharacter)
+    lp.CharacterAdded:Connect(function(newCharacter)
         if Clip == false then
             if not newCharacter:FindFirstChild("ADONIS_NoClip") then
                 local config = Instance.new("Configuration")
@@ -304,7 +304,7 @@ local function nclip()
 
     if char then
         if not char:FindFirstChild("ADONIS_NoClip") then
-            local config = Instance.new("Configuration") -- bummest shit i dont think we even need it
+            local config = Instance.new("Configuration")
             config.Name = "ADONIS_NoClip"
             config.Parent = char
         end
@@ -386,6 +386,7 @@ local keybind = noclipKeybindRow:Right():KeybindField({
 
 -- noclip end
 --modgun
+
 -- worst method to mod it i'm pretty sure but yeah 
 local IDF = gunmod:Form():Row()
 
@@ -400,7 +401,7 @@ IDF:Right():Button({
     Pushed = function(self)
         -- liveleak code below
         task.spawn(function()
-local tuffmangolarp = nil
+local nill = nil
 local plrs = game:GetService("Players")
 local lp = plrs.LocalPlayer
 local char = lp.Character or lp.CharacterAdded:Wait()
@@ -408,7 +409,7 @@ local billy = char
 local gun = billy:FindFirstChildOfClass("Tool")
 local localScript = gun:WaitForChild("GunScriptLocal")
 
-while not tuffmangolarp do
+while not nill do
     task.wait(0.2)
     
     for _, obj in ipairs(getgc()) do
@@ -420,7 +421,7 @@ while not tuffmangolarp do
                 end)
                 
                 if success and envScript == localScript then
-                    tuffmangolarp = obj
+                    nill = obj
                     break
                 end
             end
@@ -428,8 +429,8 @@ while not tuffmangolarp do
     end
 end
 
-debug.setupvalue(tuffmangolarp, 5, math.huge)
-local ratatung = debug.getupvalue(tuffmangolarp, 2)
+debug.setupvalue(nill, 5, math.huge)
+local ratatung = debug.getupvalue(nill, 2)
 
 if type(ratatung) == "table" then
 
@@ -535,46 +536,47 @@ ffzzz:Right():Button({
 
 --endgun
 -- rpg patched^^^
-local hiddenAreas = {}
-local hiddenObjects = {} 
-local daddy = Instance.new("Folder") 
-daddy.Name = gen(30)
-daddy.Parent = game:GetService("Lighting")
+-- ayo 100% not pasted
+local areas = {}
+local objects = {} 
+local weare = Instance.new("Folder") 
+weare.Name = gen(30)
+weare.Parent = game:GetService("Lighting")
 
-local diddylarp = Instance.new("Folder") 
-diddylarp.Name = gen(30)
-diddylarp.Parent = game:GetService("Lighting")
+local professionalshere = Instance.new("Folder") 
+professionalshere.Name = gen(30)
+professionalshere.Parent = game:GetService("Lighting")
 
 local function hide(obj)
-    if obj and obj.Parent and obj.Parent ~= diddylarp then
-        hiddenObjects[obj] = obj.Parent
-        pcall(function() obj.Parent = diddylarp end)
+    if obj and obj.Parent and obj.Parent ~= professionalshere then
+        objects[obj] = obj.Parent
+        pcall(function() obj.Parent = professionalshere end)
     end
 end
 
 local function restore()
-    for obj, parent in pairs(hiddenObjects) do
+    for obj, parent in pairs(objects) do
         if obj then
             obj.Parent = parent
         end
     end
-    table.clear(hiddenObjects)
+    table.clear(objects)
 end
 
 local function hidez(obj)
-    if obj and obj.Parent and obj.Parent ~= daddy then
-        hiddenAreas[obj] = obj.Parent
-        pcall(function() obj.Parent = daddy end)
+    if obj and obj.Parent and obj.Parent ~= weare then
+        areas[obj] = obj.Parent
+        pcall(function() obj.Parent = weare end)
     end
 end
 
 local function restorez()
-    for obj, parent in pairs(hiddenAreas) do
+    for obj, parent in pairs(areas) do
         if obj then
             obj.Parent = parent
         end
     end
-    table.clear(hiddenAreas)
+    table.clear(areas)
 end
 
 local itsjustthisonethingthatgotmetrippin = misc:Form():Row()
@@ -656,14 +658,14 @@ This1thingmysoulmaybefeeling:Right():Button({
     end,
 })
 --
-local larpnova = misc:Form():Row()
+local professionals = misc:Form():Row()
 
-larpnova:Left():TitleStack({
+professionals:Left():TitleStack({
     Title = "Unnamed ESP",
     Subtitle = "I wonder",
 })
 
-larpnova:Right():Button({
+professionals:Right():Button({
     Label = "Press",
     State = "Primary",
     Pushed = function(self)
@@ -1013,7 +1015,7 @@ loc13:Right():Button({
 
 local Players = game:GetService("Players")
 
-local function tungsahur(n)
+local function functionn(n)
     if not n then return "0" end
     local formatted = tostring(n)
     while true do  
@@ -1054,7 +1056,7 @@ local awk = exper:Form():Row()
 local goodteammate = exper:Form():Row()
 local skincount = exper:Form():Row()
 
-local textladiddy = exper:Form():Row()
+local textr = exper:Form():Row()
 
 local killz = killdispl:Left():TitleStack({ Title = "Total Kills: N/A" })
 local monthly = monthly:Left():TitleStack({ Title = "Monthly Kills: N/A" })
@@ -1074,18 +1076,18 @@ local function updateDisplays(larper)
         local stats = larper.Data.Stats
         local dATA = larper.Data
         
-        killz.Title = "Total Kills: " .. tungsahur(stats.TotalKills.Value)
-        monthly.Title = "Monthly Kills: " .. tungsahur(dATA.MonthlyKills.Value) 
-        weeklylar.Title = "Weekly Kills: " .. tungsahur(dATA.WeeklyKills.Value)
-        awkz.Title = "American Wrath Kills: " .. tungsahur(dATA.AmericaWrathKills.Value)
-        weeklyar.Title = "Weekly Arrests: " .. tungsahur(dATA.WeeklyArrests.Value)
-        deathz.Title = "Total Deaths: " .. tungsahur(stats.TotalDeaths.Value)
-        lvlz.Title = "Level: " .. tungsahur(stats.Level.Value)
-        xpz.Title = "Total XP: " .. tungsahur(stats.Exp.Value)
-        cashz.Title = "Cash: " .. tungsahur(stats.Cash.Value)
-        dayz.Title = "Day Streak: " .. tungsahur(dATA.DailyRewardsData.DayStreak.Value)
-        goodteammatez.Title = "Total Heal Count: " .. tungsahur(stats.TotalHeals.Value)
-        skincount.Title = "Total Skin Count: " .. tungsahur(#larper.OwnedSkins:GetChildren())
+        killz.Title = "Total Kills: " .. functionn(stats.TotalKills.Value)
+        monthly.Title = "Monthly Kills: " .. functionn(dATA.MonthlyKills.Value) 
+        weeklylar.Title = "Weekly Kills: " .. functionn(dATA.WeeklyKills.Value)
+        awkz.Title = "American Wrath Kills: " .. functionn(dATA.AmericaWrathKills.Value)
+        weeklyar.Title = "Weekly Arrests: " .. functionn(dATA.WeeklyArrests.Value)
+        deathz.Title = "Total Deaths: " .. functionn(stats.TotalDeaths.Value)
+        lvlz.Title = "Level: " .. functionn(stats.Level.Value)
+        xpz.Title = "Total XP: " .. functionn(stats.Exp.Value)
+        cashz.Title = "Cash: " .. functionn(stats.Cash.Value)
+        dayz.Title = "Day Streak: " .. functionn(dATA.DailyRewardsData.DayStreak.Value)
+        goodteammatez.Title = "Total Heal Count: " .. functionn(stats.TotalHeals.Value)
+        skincount.Title = "Total Skin Count: " .. functionn(#larper.OwnedSkins:GetChildren())
     else
         killz.Title = "Total Kills: N/A"
         monthly.Title = "Monthly Kills: N/A"
@@ -1101,7 +1103,7 @@ local function updateDisplays(larper)
     end
 end
 
-local pedofield = textladiddy:Left():TextField({
+local pedofield = textr:Left():TextField({
     Placeholder = "Search player name...",
     Value = "",
     ValueChanged = function(self, value: string)
