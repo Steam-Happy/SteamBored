@@ -392,7 +392,7 @@ local IDF = gunmod:Form():Row()
 
 IDF:Left():TitleStack({
     Title = "Mod Current Gun",
-    Subtitle = "ok [DOESNT WORK FOR RPG AND OTHERS WONT SEE U ARE SHOOTING BUT ITS DOING DMG ANYWAYS]",
+    Subtitle = "ok [ayo rpg unpatched 9/7/2026]",
 })
 
 IDF:Right():Button({
@@ -469,7 +469,7 @@ local IDFsoldiers = gunmod:Form():Row()
 
 IDFsoldiers:Left():TitleStack({
     Title = "Give current gun infinite ammo",
-    Subtitle = "only in current mag so uh ye if it disappears js press button again [DOESNT WORK FOR RPG AND OTHERS WONT SEE U ARE SHOOTING BUT ITS DOING DMG ANYWAYS]", 
+    Subtitle = "only in current mag so uh ye if it disappears js press button again [ayo working on rpg 9/7/2026]", 
 })
 
 IDFsoldiers:Right():Button({
