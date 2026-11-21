@@ -4,10 +4,13 @@ meownet.send = function(self, ...)
     local sendtable = {...}
 
     if string.find(string.lower(sendtable[1]), "report") then
-        print("detected \n type: "..sendtable[2] .. " | Reason: " .. sendtable[4])
+        if not string.find(sendtable[4],"metamethod tampering") then
+            print("detected \ntype: "..sendtable[2] .. " | Reason: " .. sendtable[4])
+        end
     else
         return
     end
 end
 
--- Same as 75KW.luau just with logging on why you got detected
+-- yo this shit is useless if you can just run the bypass and not have to worry about detections 😔🥀
+-- and how is this unpatched still ✌️
